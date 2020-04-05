@@ -1,4 +1,28 @@
-.App {
+
+.bg-container {
+ background-color: #282c34;
+ color: #fafafa;
+}
+.white {
+  color: white;
+}
+.underL {
+  text-decoration: underline;
+  color: rgb(109, 173, 123);
+}
+ul.Data {
+  list-style-position: inside;
+  list-style-type: none;
+}
+ul.Skill {
+  list-style-position: inside;
+  
+}
+.description {
+  font-size: 10px;
+}
+
+/*.App {
   text-align: center;
 }
 
@@ -35,4 +59,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+}*/
