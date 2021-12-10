@@ -12,9 +12,10 @@ import {
 } from "@material-ui/core";
 
 let theme = createMuiTheme();
-theme = responsiveFontSizes(theme);
+theme = responsiveFontSizes(theme); //Declaración de tema para hacer fontsize responsivo
+ 
 
-
+//Header es la clase donde estan las propiedades de el titulo JAVIER GONZÁLEZ... y el subtitulo ESTUDIANTE DE ...
 class Header extends React.Component {
  render () {
    return <Box mr={2} pt={10} ml={3}>
@@ -25,6 +26,7 @@ class Header extends React.Component {
 }
 
 class Datos extends React.Component {
+  /*Values es un array de strings. Se utiliza el constructor para mapear el array, convertir cada valor en un elemento de la lista y almacenarlo en el state del constructor */
   constructor (props) {
     super(props);
      this.state = this.props.values.map(
@@ -34,8 +36,8 @@ class Datos extends React.Component {
   }
 render () {
   return <Box mr={2}>
-          <div className="underL"><Typography variant="h4" className = "white">{this.props.title}</Typography></div>
-          <Typography variant="subtitle2" align="right"><ul className="Data">{this.state}</ul></Typography>
+          <div className="underL"><Typography variant="h4" className = "white">{this.props.title}</Typography></div>{/*La clase underL subraya con un color de texto predeterminado. Dentro del div se encuentra otro tag con la clase white que redefine el color del texto haciendo que el subrayado sea verde y el texto blanco*/}
+          <Typography variant="subtitle2" align="right"><ul className="Data">{this.state}</ul></Typography> {/*La clase Data modifica el tipo de lista y dentro del tag ul se llama el state del constructor previamente definido */}
         </Box>
   
 }
@@ -54,7 +56,7 @@ render () {
           <Typography variant="h6">{this.props.title}</Typography>
           <Typography variant="subtitle2">{this.props.institution}</Typography> 
           <Typography variant="subtitle2">{this.props.period}</Typography>
-          <div className="description">{this.props.description}</div>
+          <div className="description">{this.props.description}</div> {/*description es una clase que da un font size de 10px */}
           <Typography variant="subtitle2"><ul>{this.state}</ul></Typography>
         </Box>
           }
@@ -69,7 +71,7 @@ class Skills extends React.Component {
     );
   }
 render () {
-  return <Box ml={2} mr={2}>
+  return <Box ml={2} mr={2}> 
           <div className="underL"><Typography variant="h4" align="right" className = "white">{this.props.title}</Typography></div>
           <Typography variant="subtitle2" align="left"><ul>{this.state}</ul></Typography>
         </Box>
