@@ -13,7 +13,7 @@ import {
 
 let theme = createMuiTheme();
 theme = responsiveFontSizes(theme); //Declaración de tema para hacer fontsize responsivo
- 
+ //
 
 //Header es la clase donde estan las propiedades de el titulo JAVIER GONZÁLEZ... y el subtitulo ESTUDIANTE DE ...
 class Header extends React.Component {
